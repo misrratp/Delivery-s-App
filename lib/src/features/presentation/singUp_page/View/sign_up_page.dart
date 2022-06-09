@@ -1,6 +1,11 @@
-import 'package:deliver_app_yt/src/colors/colors.dart';
-import 'package:deliver_app_yt/src/features/presentation/widgets/back_button.dart';
 import 'package:flutter/material.dart';
+//Common widgets
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/back_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+//Colors
+import 'package:deliver_app_yt/src/colors/colors.dart';
+
+
 
 class SignUpPage extends StatelessWidget {
   @override
@@ -18,11 +23,8 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              Text('Create an account',
-                  style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0)),
+              headerText('Create an account', Theme.of(context).primaryColor, 30.0)
+              ,
               _usernameInput(context),
               _emailInput(context),
               _phoneInput(context),

@@ -1,6 +1,9 @@
-
 import 'package:flutter/material.dart';
+//Commons
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+//Colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
+//Swiper
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class ExploreTab extends StatelessWidget {
@@ -21,11 +24,9 @@ class ExploreTab extends StatelessWidget {
                 padding: EdgeInsets.only(left: 20),//Apliqué esto en vez del padding symmetric ya que marca error de pixeles
                 margin: EdgeInsets.symmetric(vertical: 20.0),
                 alignment: Alignment.centerLeft,
-                child: Text('Discover New Places',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30.0)),
+                child: 
+                
+                headerText('Discover New Places', Colors.black, 30.0),
               ),
               _sliderCards()
             ],
