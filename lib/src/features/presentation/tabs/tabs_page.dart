@@ -1,6 +1,6 @@
-import 'package:deliver_app_yt/src/features/presentation/tabs/explore_tab.dart';
-import 'package:deliver_app_yt/src/features/presentation/tabs/favourite_tab.dart';
-import 'package:deliver_app_yt/src/features/presentation/tabs/profile_tab.dart';
+import 'package:deliver_app_yt/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
+import 'package:deliver_app_yt/src/features/presentation/tabs/favourite_tab/View/favourite_tab.dart';
+import 'package:deliver_app_yt/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 import 'package:flutter/material.dart';
 
 //Tabs

@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
                   //
                   //Cambiar el numero de height si les aparece el mensaje de "BOTTOM OVERFLOWED BY ## PIXELS" en la pagina de login
                   //
-                  height: 320.0,
+                  height: 240.0,
                   fit: BoxFit.cover,
                   image: NetworkImage(
                       'https://www.mexicodesconocido.com.mx/wp-content/uploads/2018/04/comida-mexicana-1.jpg')),
