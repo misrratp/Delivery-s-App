@@ -1,10 +1,10 @@
+import 'package:deliver_app_yt/src/features/presentation/tabs/explore_tab.dart';
+import 'package:deliver_app_yt/src/features/presentation/tabs/favourite_tab.dart';
+import 'package:deliver_app_yt/src/features/presentation/tabs/profile_tab.dart';
 import 'package:flutter/material.dart';
 
 //Tabs
-import 'package:deliver_app_yt/src/tabs/explore_tab.dart';
-import 'package:deliver_app_yt/src/tabs/favourite_tab.dart';
-import 'package:deliver_app_yt/src/tabs/my_order_tab.dart';
-import 'package:deliver_app_yt/src/tabs/profile_tab.dart';
+
 
 class TabsPage extends StatefulWidget {
   TabsPage({Key? key}) : super(key: key);
@@ -16,7 +16,6 @@ class TabsPage extends StatefulWidget {
 class _TabsPageState extends State<TabsPage> {
   List<Widget> _widgetOptions = [
     ExploreTab(),
-    MyOrderTab(),
     FavouriteTab(),
     ProfileTab()
   ];
