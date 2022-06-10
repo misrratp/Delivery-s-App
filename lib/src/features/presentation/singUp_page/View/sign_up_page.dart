@@ -23,7 +23,7 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              headerText('Create an account', Theme.of(context).primaryColor, 30.0)
+              headerText('Create an account', Theme.of(context).primaryColor, 30.0, FontWeight.bold)
               ,
               _usernameInput(context),
               _emailInput(context),

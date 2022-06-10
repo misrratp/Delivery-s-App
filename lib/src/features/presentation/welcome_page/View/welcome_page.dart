@@ -34,13 +34,13 @@ class WelcomePage extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0),
-                child: headerText('DELIVERED FAST FOOD TO YOUR DOOR', Colors.white, 45.0),
+                child: headerText('DELIVERED FAST FOOD TO YOUR DOOR', Colors.white, 45.0, FontWeight.bold),
               ),
 
             
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
-                child: headerText('Set exact location to find the right restaurants near you.', Colors.white, 17),
+                child: headerText('Set exact location to find the right restaurants near you.', Colors.white, 17, FontWeight.bold),
               ),
               Container(
                 width: 350.0,

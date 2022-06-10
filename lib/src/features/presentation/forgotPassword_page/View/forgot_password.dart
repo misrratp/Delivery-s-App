@@ -20,7 +20,7 @@ class ForgotPassword extends StatelessWidget {
           padding: EdgeInsets.all(30.0),
           child: Column(
             children: [
-              headerText('Forgot Password', Theme.of(context).primaryColor, 30.0),
+              headerText('Forgot Password', Theme.of(context).primaryColor, 30.0, FontWeight.bold),
               Container(
                 padding: EdgeInsets.all(10.0),
                 child: Text(
@@ -95,7 +95,7 @@ void _showAlerta(BuildContext context) {
                   margin: EdgeInsets.all(15.0),
                   child: 
                   
-                  headerText('Your password has been reset', Theme.of(context).primaryColor, 20.0),
+                  headerText('Your password has been reset', Theme.of(context).primaryColor, 20.0, FontWeight.bold),
                 ),
                 Container(
                   margin: EdgeInsets.all(15.0),
