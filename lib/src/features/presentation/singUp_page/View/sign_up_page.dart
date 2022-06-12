@@ -1,3 +1,4 @@
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 //Common widgets
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/back_button.dart';
@@ -23,14 +24,14 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              headerText('Create an account', Theme.of(context).primaryColor, 30.0, FontWeight.bold)
+              headerText(texto: 'Create an account', color: primaryColor, fontSize: 30.0)
               ,
               _usernameInput(context),
               _emailInput(context),
               _phoneInput(context),
               _dateOfBirthInput(context),
               _passwordInput(context),
-              _signUpButton(context),
+              roundedButton(labelButton: 'Sign Up', color: orange, func: (){}),
               Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
@@ -120,17 +121,3 @@ Widget _passwordInput(BuildContext context) {
       ));
 }
 
-Widget _signUpButton(BuildContext context) {
-  return Container(
-    width: 370.0,
-    height: 45.0,
-    margin: EdgeInsets.only(top: 40.0),
-    child: RaisedButton(
-      onPressed: () {},
-      color: Theme.of(context).accentColor,
-      child: Text('Sign Up',
-          style: TextStyle(color: Colors.white, fontSize: 17.0)),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-    ),
-  );
-}

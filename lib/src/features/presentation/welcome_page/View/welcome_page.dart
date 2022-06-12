@@ -1,9 +1,11 @@
-
 import 'package:flutter/material.dart';
+//Colors<
+import 'package:deliver_app_yt/src/colors/colors.dart';
 //UIS
 import 'dart:ui';
 //Commons Widgets
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
 //services
 import 'package:flutter/services.dart';
 
@@ -34,53 +36,32 @@ class WelcomePage extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0),
-                child: headerText('DELIVERED FAST FOOD TO YOUR DOOR', Colors.white, 45.0, FontWeight.bold),
+                child: headerText(texto: 'DELIVERED FAST FOOD TO YOUR DOOR', color: Colors.white, fontSize: 45.0),
               ),
 
             
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
-                child: headerText('Set exact location to find the right restaurants near you.', Colors.white, 17, FontWeight.bold),
+                child: headerText(texto: 'Set exact location to find the right restaurants near you.',
+                 color: Colors.white, fontSize: 17),
               ),
-              Container(
-                width: 350.0,
-                height: 45.0,
-                margin: EdgeInsets.only(top: 40.0),
-                child: RaisedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'login');
-                    },
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0)),
-                    color: Theme.of(context).accentColor,
-                    child: Text('Log in',
-                        style: TextStyle(color: Colors.white, fontSize: 15.0))),
-              ),
-              Container(
-                  width: 350.0,
-                  height: 45.0,
-                  margin: EdgeInsets.only(top: 20.0),
-                  child: RaisedButton(
-                      onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0)),
-                      color: Theme.of(context).buttonColor,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(
-                            image: AssetImage('assets/facebook.png'),
-                            width: 20.0,
-                            height: 20.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 10.0),
-                            child: Text('Connect with Facebook',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 15.0)),
-                          )
-                        ],
-                      )))
+               
+                  roundedButton(
+                  labelButton: 'Log in',
+                  color: orange, func: (){
+                    Navigator.pushNamed(context, 'login');
+                  }),
+
+                  roundedButton( 
+                  labelButton: 'Connect with facebook',
+                  color: fbButtonColor,
+                  isWithIcon: true,
+                  icon: AssetImage('assets/facebook.png'),
+                  func: () => print('goToFacebook')
+
+              )
+
+              //aqui va en boton azull
             ],
           )
         ],
@@ -88,3 +69,5 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
+
+

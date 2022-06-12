@@ -1,10 +1,12 @@
+import 'package:deliver_app_yt/src/colors/colors.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/alert_dialog.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/favourite_tab/View/favourite_tab.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 import 'package:flutter/material.dart';
 
 //Tabs
-
 
 class TabsPage extends StatefulWidget {
   TabsPage({Key? key}) : super(key: key);
@@ -14,11 +16,15 @@ class TabsPage extends StatefulWidget {
 }
 
 class _TabsPageState extends State<TabsPage> {
-  List<Widget> _widgetOptions = [
-    ExploreTab(),
-    FavouriteTab(),
-    ProfileTab()
-  ];
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      _pedirLocation(context);
+    });
+  }
+
+  List<Widget> _widgetOptions = [ExploreTab(), FavouriteTab(), ProfileTab()];
 
   int _selectedItemIndex = 0;
 
@@ -39,18 +45,29 @@ class _TabsPageState extends State<TabsPage> {
   Widget _bottomNavigationBar(BuildContext context) {
     return BottomNavigationBar(
       iconSize: 30.0,
-      selectedItemColor: Theme.of(context).accentColor,
+      selectedItemColor: orange,
       unselectedItemColor: Colors.grey,
       currentIndex: _selectedItemIndex,
       onTap: _cambiarWidget,
       showUnselectedLabels: true,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.assignment), label: 'My Order'),
+        BottomNavigationBarItem(icon: Icon(Icons.assignment), label: 'My Order'),
         BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Favourite'),
         BottomNavigationBarItem(icon: Icon(Icons.person_pin), label: 'Profile'),
       ],
     );
   }
+
+  Future _pedirLocation(BuildContext context) async {
+    showAlertDialog(
+        context,
+        AssetImage('assets/location.png'),
+        'Enable Your Location',
+        "Please allow to use your location to show nearby restaurant on the map.",
+        roundedButton(labelButton: 'Enable Your Location', color: orange, func: (){}));
+
+  }
+
+
 }

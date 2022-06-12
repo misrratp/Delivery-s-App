@@ -26,14 +26,23 @@ class ExploreTab extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: 
                 
-                headerText('Discover New Places', Colors.black, 30.0, FontWeight.bold),
+                headerText(texto: 'Discover New Places', color:Colors.black, fontSize: 30.0),
               ),
               _sliderCards(),
-              _header(context, 'Popular this week', 'Show All'),
-              _populares(context, 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'),
-              _populares(context, 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'),
-              _populares(context, 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60')
-           
+              _header(context,
+                    'Popular this week', 'Show All'),
+              _populares(context,
+                    'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'),
+              _populares(context,
+                    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'),
+              _populares(context,
+                    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'),
+             SizedBox(
+               height:10.0,
+             ),
+              _header(context,'Collections', 'Show All'),
+
+              _sliderCollection()
             ],
           ),
         ),
@@ -44,29 +53,36 @@ class ExploreTab extends StatelessWidget {
 
 Widget _topBar(BuildContext context) {
   return Row(
+    
     children: [
-      Container(
-        width: 280, //Cambiar si sale un error de pixeles del lado derecho
-        padding: EdgeInsets.all(10.0),
-        margin: EdgeInsets.only(left: 16.0),
-        decoration: BoxDecoration(
-            border: Border.all(color: Color.fromRGBO(234, 236, 239, 1)),
-            borderRadius: BorderRadius.circular(20.0)),
-        child: Row(
-          children: [
-            Icon(
-              Icons.search,
-              size: 20.0,
-              color: gris,
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 5.0),
-              child: Text(
-                'Search',
-                style: TextStyle(color: gris, fontSize: 17.0),
+      GestureDetector(
+        onTap: (() => Navigator.pushNamed(context, 'search')),
+        child: Container(
+          width: 280,
+           //Cambiar si sale un error de pixeles del lado derecho
+          padding: EdgeInsets.all(10.0),
+          margin: EdgeInsets.only(left: 20.0),
+          decoration: BoxDecoration(
+              border: Border.all(color: Color.fromRGBO(234, 236, 239, 1)),
+              borderRadius: BorderRadius.circular(20.0)),
+          child: Row(
+            children: [
+              Icon(
+                Icons.search,
+                
+                size: 20.0,
+                color: gris,
               ),
-            )
-          ],
+              Container(
+                margin: EdgeInsets.only(left: 5.0),
+
+                child: Text(
+                  'Search',
+                  style: TextStyle(color: gris, fontSize: 17.0),
+                ),
+              )
+            ],
+          ),
         ),
       ),
       Container(
@@ -172,7 +188,7 @@ Widget _tarjeta(BuildContext context){
                     child: RaisedButton(
                       elevation: 0.5,
                       shape: StadiumBorder(),
-                      color: Theme.of(context).accentColor,
+                      color: orange,
                       textColor: Colors.white,
                       onPressed: (){},
 
@@ -197,7 +213,7 @@ Widget _header( BuildContext context , String textHeader, String textAction ){
       Container(
         alignment: Alignment.centerLeft,
         child: 
-        headerText(textHeader, Colors.black, 20.0, FontWeight.bold),
+        headerText(texto: textHeader, color: Colors.black,fontSize: 20.0),
       ),
       Spacer(),
       GestureDetector(
@@ -240,15 +256,13 @@ Widget _populares(BuildContext context, String foto){
             Container(
               padding: EdgeInsets.only(left: 10.0),//Modificar si hay problemas de pixeles
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
 
-                children: [
-
-                  
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 7.0),
-                    child: headerText('Andy & Cindys Dinner', Colors.black, 17.0, FontWeight.bold)
+                    child: headerText(texto: 'Andy & Cindys Dinner', color: Colors.black, fontSize: 17.0)
                     ),
                    Container(
                     alignment: Alignment.centerLeft,
@@ -285,7 +299,7 @@ Widget _populares(BuildContext context, String foto){
                         onPressed: (){},
                         elevation: 0.5,
                         shape: StadiumBorder(),
-                        color: Theme.of(context).accentColor,
+                        color: orange,
                         child: Text(
                           'Delivery', style: TextStyle(fontSize: 11.0, color: Colors.white),
                         ),
@@ -302,5 +316,45 @@ Widget _populares(BuildContext context, String foto){
         ),
       )
     ],
+  );
+}
+
+Widget _sliderCollection(){
+   return Container(
+     height: 180.0,
+     child: Swiper(
+        itemCount: 4,
+        layout: SwiperLayout.DEFAULT,
+        itemBuilder: (BuildContext context, int index) {
+          return ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (BuildContext context, int index)  {
+              return _tarjetaCollection(context);
+
+          });
+       },
+     ),
+   );
+}
+
+Widget _tarjetaCollection(BuildContext context){
+  return Container(
+    margin: EdgeInsets.all(10.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: Image(
+            width: 300,
+            height: 150,
+            fit: BoxFit.cover,
+            image: NetworkImage(
+                                'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'
+          ),
+          ),
+        ),
+      ],
+    ),
   );
 }

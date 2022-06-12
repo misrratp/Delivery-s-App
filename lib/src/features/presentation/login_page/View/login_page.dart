@@ -1,4 +1,5 @@
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/back_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 //colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
@@ -47,7 +48,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text('Welcome Back',
                           style: TextStyle(
-                              color: Theme.of(context).primaryColor,
+                              color: primaryColor,
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0)),
                       Text('Login to you account',
@@ -57,7 +58,12 @@ class LoginPage extends StatelessWidget {
                               fontSize: 15.0)),
                       _emailInput(),
                       _passwordInput(),
-                      _buttonLogin(context),
+                      roundedButton(
+                        labelButton: 'Log in', color: orange,
+                        func: (){
+                          Navigator.pushNamed(context, 'tabs');
+                        }
+                      ),
                       Container(
                         margin: EdgeInsets.only(top: 30.0),
                         child: GestureDetector(
@@ -89,7 +95,7 @@ class LoginPage extends StatelessWidget {
                                 margin: EdgeInsets.symmetric(horizontal: 10.0),
                                 child: Text('Sign up',
                                     style: TextStyle(
-                                        color: Theme.of(context).accentColor,
+                                        color: orange,
                                         fontWeight: FontWeight.w400,
                                         fontSize: 15.0)),
                               ),
@@ -141,19 +147,3 @@ Widget _passwordInput() {
   );
 }
 
-Widget _buttonLogin(BuildContext context) {
-  return Container(
-    width: 350.0,
-    height: 45.0,
-    margin: EdgeInsets.only(top: 30.0),
-    child: RaisedButton(
-        onPressed: () {
-          Navigator.pushNamed(context, 'tabs');
-        },
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-        color: Theme.of(context).accentColor,
-        child: Text('Log in',
-            style: TextStyle(color: Colors.white, fontSize: 17.0))),
-  );
-}
