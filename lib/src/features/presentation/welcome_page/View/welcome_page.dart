@@ -4,8 +4,8 @@ import 'package:deliver_app_yt/src/colors/colors.dart';
 //UIS
 import 'dart:ui';
 //Commons Widgets
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 //services
 import 'package:flutter/services.dart';
 
@@ -36,30 +36,34 @@ class WelcomePage extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0),
-                child: headerText(texto: 'DELIVERED FAST FOOD TO YOUR DOOR', color: Colors.white, fontSize: 45.0),
+                child: headerText(
+                    texto: 'DELIVERED FAST FOOD TO YOUR DOOR',
+                    color: Colors.white,
+                    fontSize: 45.0),
               ),
 
-            
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
-                child: headerText(texto: 'Set exact location to find the right restaurants near you.',
-                 color: Colors.white, fontSize: 17),
+                child: headerText(
+                    texto:
+                        'Set exact location to find the right restaurants near you.',
+                    color: Colors.white,
+                    fontSize: 17),
               ),
-               
-                  roundedButton(
+
+              roundedButton(
                   labelButton: 'Log in',
-                  color: orange, func: (){
+                  color: orange,
+                  func: () {
                     Navigator.pushNamed(context, 'login');
                   }),
 
-                  roundedButton( 
+              roundedButton(
                   labelButton: 'Connect with facebook',
                   color: fbButtonColor,
                   isWithIcon: true,
                   icon: AssetImage('assets/facebook.png'),
-                  func: () => print('goToFacebook')
-
-              )
+                  func: () => print('goToFacebook'))
 
               //aqui va en boton azull
             ],
@@ -69,5 +73,3 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
-
-

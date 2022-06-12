@@ -3,7 +3,7 @@ import 'package:deliver_app_yt/src/features/presentation/filter_page/View/custom
 import 'package:flutter/material.dart';
 
 //Commons
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 
 //Colors
 import 'package:deliver_app_yt/src/colors/colors.dart';

@@ -1,12 +1,10 @@
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 //Common widgets
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/back_button.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 //Colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
-
-
 
 class SignUpPage extends StatelessWidget {
   @override
@@ -24,14 +22,16 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              headerText(texto: 'Create an account', color: primaryColor, fontSize: 30.0)
-              ,
+              headerText(
+                  texto: 'Create an account',
+                  color: primaryColor,
+                  fontSize: 30.0),
               _usernameInput(context),
               _emailInput(context),
               _phoneInput(context),
               _dateOfBirthInput(context),
               _passwordInput(context),
-              roundedButton(labelButton: 'Sign Up', color: orange, func: (){}),
+              roundedButton(labelButton: 'Sign Up', color: orange, func: () {}),
               Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
@@ -120,4 +120,3 @@ Widget _passwordInput(BuildContext context) {
             border: OutlineInputBorder(borderSide: BorderSide.none)),
       ));
 }
-

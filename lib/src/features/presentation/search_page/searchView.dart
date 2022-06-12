@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:deliver_app_yt/src/colors/colors.dart';
 
 //Commons Widgets
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/card_vertical.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/header_double.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/populares_card.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Cards/card_vertical.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/header_double.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Cards/populares_card.dart';
 
 //Swiper
 import 'package:flutter_swiper/flutter_swiper.dart';

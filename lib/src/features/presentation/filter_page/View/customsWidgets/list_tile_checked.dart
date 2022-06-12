@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:deliver_app_yt/src/colors/colors.dart';
 
 //Commons Widgets
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 
 class ListTileCheck extends StatefulWidget {
   String texto;

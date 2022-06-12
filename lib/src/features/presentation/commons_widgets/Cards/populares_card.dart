@@ -1,5 +1,5 @@
 import 'package:deliver_app_yt/src/colors/colors.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 import 'package:flutter/material.dart';
 
 Widget popularesCard({

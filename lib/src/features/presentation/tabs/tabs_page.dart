@@ -1,6 +1,6 @@
 import 'package:deliver_app_yt/src/colors/colors.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/alert_dialog.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Alerts/alert_dialog.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/favourite_tab/View/favourite_tab.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
@@ -52,7 +52,8 @@ class _TabsPageState extends State<TabsPage> {
       showUnselectedLabels: true,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
-        BottomNavigationBarItem(icon: Icon(Icons.assignment), label: 'My Order'),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.assignment), label: 'My Order'),
         BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Favourite'),
         BottomNavigationBarItem(icon: Icon(Icons.person_pin), label: 'Profile'),
       ],
@@ -65,9 +66,7 @@ class _TabsPageState extends State<TabsPage> {
         AssetImage('assets/location.png'),
         'Enable Your Location',
         "Please allow to use your location to show nearby restaurant on the map.",
-        roundedButton(labelButton: 'Enable Your Location', color: orange, func: (){}));
-
+        roundedButton(
+            labelButton: 'Enable Your Location', color: orange, func: () {}));
   }
-
-
 }

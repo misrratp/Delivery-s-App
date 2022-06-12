@@ -1,5 +1,5 @@
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/back_button.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 //colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
@@ -59,11 +59,11 @@ class LoginPage extends StatelessWidget {
                       _emailInput(),
                       _passwordInput(),
                       roundedButton(
-                        labelButton: 'Log in', color: orange,
-                        func: (){
-                          Navigator.pushNamed(context, 'tabs');
-                        }
-                      ),
+                          labelButton: 'Log in',
+                          color: orange,
+                          func: () {
+                            Navigator.pushNamed(context, 'tabs');
+                          }),
                       Container(
                         margin: EdgeInsets.only(top: 30.0),
                         child: GestureDetector(
@@ -146,4 +146,3 @@ Widget _passwordInput() {
     ),
   );
 }
-

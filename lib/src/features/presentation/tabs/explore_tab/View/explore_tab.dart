@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //Commons
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/headers_text.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/populares_card.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Cards/populares_card.dart';
 //Colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
 //Swiper
