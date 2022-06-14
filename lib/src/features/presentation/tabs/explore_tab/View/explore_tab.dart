@@ -68,7 +68,11 @@ class ExploreTab extends StatelessWidget {
               SizedBox(
                 height: 10.0,
               ),
-              _header(context, 'Collections', 'Show All'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, 'collections');
+                },
+                child: _header(context, 'Collections', 'Show All')),
               _sliderCollection()
             ],
           ),
@@ -150,74 +154,79 @@ Widget _sliderCards() {
 }
 
 Widget _tarjeta(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.all(5.0),
-    child: Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: Image(
-              width: 200.0,
-              height: 200.0,
-              fit: BoxFit.cover,
-              image: NetworkImage(
-                  'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60')),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10.0),
-              child: Text(
-                'Andy & Gindys Diner',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17.0),
+  return GestureDetector(
+    onTap: (){
+    Navigator.pushNamed(context, 'place-detail');
+    },
+    child: Container(
+      margin: EdgeInsets.all(5.0),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: Image(
+                width: 200.0,
+                height: 200.0,
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                    'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60')),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 10.0),
+                child: Text(
+                  'Andy & Gindys Diner',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17.0),
+                ),
               ),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                '87 Bostford Circle Apt',
-                style: TextStyle(
-                    color: gris, fontWeight: FontWeight.w500, fontSize: 13.0),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '87 Bostford Circle Apt',
+                  style: TextStyle(
+                      color: gris, fontWeight: FontWeight.w500, fontSize: 13.0),
+                ),
               ),
-            ),
-            Row(
-              children: [
-                Icon(Icons.star, color: amarillo, size: 16.0),
-                Text('4.8',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13.0)),
-                Text('(233 Rattings)',
-                    style: TextStyle(
-                        color: gris,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13.0)),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  width: 80.0,
-                  height: 18.0,
-                  child: RaisedButton(
-                    elevation: 0.5,
-                    shape: StadiumBorder(),
-                    color: orange,
-                    textColor: Colors.white,
-                    onPressed: () {},
-                    child: Text(
-                      'Delivery',
-                      style: TextStyle(fontSize: 11.0),
+              Row(
+                children: [
+                  Icon(Icons.star, color: amarillo, size: 16.0),
+                  Text('4.8',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13.0)),
+                  Text('(233 Rattings)',
+                      style: TextStyle(
+                          color: gris,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13.0)),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    width: 80.0,
+                    height: 18.0,
+                    child: RaisedButton(
+                      elevation: 0.5,
+                      shape: StadiumBorder(),
+                      color: orange,
+                      textColor: Colors.white,
+                      onPressed: () {},
+                      child: Text(
+                        'Delivery',
+                        style: TextStyle(fontSize: 11.0),
+                      ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
-        )
-      ],
+                  )
+                ],
+              ),
+            ],
+          )
+        ],
+      ),
     ),
   );
 }
