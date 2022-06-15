@@ -3,6 +3,7 @@ import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Alerts/
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/favourite_tab/View/favourite_tab.dart';
+import 'package:deliver_app_yt/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,12 @@ class _TabsPageState extends State<TabsPage> {
     });
   }
 
-  List<Widget> _widgetOptions = [ExploreTab(), FavouriteTab(), ProfileTab()];
+  List<Widget> _widgetOptions = [
+    ExploreTab(),
+    MyOrderTab(),
+    FavouriteTab(),
+    ProfileTab()
+  ];
 
   int _selectedItemIndex = 0;
 
