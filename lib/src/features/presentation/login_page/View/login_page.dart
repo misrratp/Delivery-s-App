@@ -58,9 +58,9 @@ class LoginPage extends StatelessWidget {
                               fontSize: 15.0)),
                       _emailInput(),
                       _passwordInput(),
-                      roundedButton(
+                      createButton(
                           labelButton: 'Log in',
-                          color: orange,
+                          buttonColor: orange,
                           func: () {
                             Navigator.pushNamed(context, 'tabs');
                           }),

@@ -1,8 +1,9 @@
 import 'dart:ui';
 
 import 'package:deliver_app_yt/src/colors/colors.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
-import 'package:deliver_app_yt/src/features/presentation/filter_page/View/customsWidgets/list_tile_checked.dart';
+import 'package:deliver_app_yt/src/features/presentation/filter_page/View/components/list_tile_checked.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/my_order_tab/View/Components/empty_order_view.dart';
 import 'package:flutter/material.dart';
 
@@ -119,18 +120,13 @@ Widget _cardOrderTopContent() {
                   fontWeight: FontWeight.w500,
                   fontSize: 15.0),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0),
-                width: 100.0,
-                height: 20.0,
-                child: RaisedButton(
-                    elevation: 0.5,
-                    shape: StadiumBorder(),
-                    color: orange,
-                    textColor: Colors.white,
-                    onPressed: () {},
-                    child: headerText(
-                        texto: "Free Delivary", fontSize: 11.0, color: white)),
-              )
+                  margin: EdgeInsets.symmetric(horizontal: 10.0),
+                  width: 100.0,
+                  height: 20.0,
+                  child: createButton(
+                      labelButton: 'Free Delivery',
+                      buttonColor: orange,
+                      labelFontsize: 11.0)),
             ],
           ),
         )
@@ -229,10 +225,12 @@ Widget _bottomCheckOut(context) {
     width: double.infinity,
     height: 45.0,
     margin: EdgeInsets.only(top: 10.0),
-    child: RaisedButton(
-      elevation: 0.5,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      color: orange,
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        elevation: 0.5,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        primary: orange,
+      ),
       onPressed: () {},
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

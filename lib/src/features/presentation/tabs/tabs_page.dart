@@ -72,7 +72,9 @@ class _TabsPageState extends State<TabsPage> {
         AssetImage('assets/location.png'),
         'Enable Your Location',
         "Please allow to use your location to show nearby restaurant on the map.",
-        roundedButton(
-            labelButton: 'Enable Your Location', color: orange, func: () {}));
+        createButton(
+            labelButton: 'Enable Your Location',
+            buttonColor: orange,
+            func: () {}));
   }
 }

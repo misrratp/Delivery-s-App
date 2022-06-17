@@ -1,3 +1,4 @@
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 //Commons
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
@@ -69,10 +70,10 @@ class ExploreTab extends StatelessWidget {
                 height: 10.0,
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, 'collections');
-                },
-                child: _header(context, 'Collections', 'Show All')),
+                  onTap: () {
+                    Navigator.pushNamed(context, 'collections');
+                  },
+                  child: _header(context, 'Collections', 'Show All')),
               _sliderCollection()
             ],
           ),
@@ -88,7 +89,7 @@ Widget _topBar(BuildContext context) {
       GestureDetector(
         onTap: (() => Navigator.pushNamed(context, 'search')),
         child: Container(
-          width: 280,
+          width: 320,
           //Cambiar si sale un error de pixeles del lado derecho
           padding: EdgeInsets.all(10.0),
           margin: EdgeInsets.only(left: 20.0),
@@ -155,8 +156,8 @@ Widget _sliderCards() {
 
 Widget _tarjeta(BuildContext context) {
   return GestureDetector(
-    onTap: (){
-    Navigator.pushNamed(context, 'place-detail');
+    onTap: () {
+      Navigator.pushNamed(context, 'place-detail');
     },
     child: Container(
       margin: EdgeInsets.all(5.0),
@@ -206,21 +207,13 @@ Widget _tarjeta(BuildContext context) {
                           fontWeight: FontWeight.w500,
                           fontSize: 13.0)),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    width: 80.0,
-                    height: 18.0,
-                    child: RaisedButton(
-                      elevation: 0.5,
-                      shape: StadiumBorder(),
-                      color: orange,
-                      textColor: Colors.white,
-                      onPressed: () {},
-                      child: Text(
-                        'Delivery',
-                        style: TextStyle(fontSize: 11.0),
-                      ),
-                    ),
-                  )
+                      margin: EdgeInsets.symmetric(horizontal: 5.0),
+                      width: 80.0,
+                      height: 18.0,
+                      child: createButton(
+                          labelButton: 'Delivery',
+                          buttonColor: orange,
+                          labelFontsize: 11.0))
                 ],
               ),
             ],

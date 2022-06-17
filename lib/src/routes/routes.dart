@@ -1,3 +1,4 @@
+import 'package:deliver_app_yt/src/features/presentation/profile_detail_page/view/profile_detail_page.dart';
 import 'package:flutter/material.dart';
 //Pages
 import 'package:deliver_app_yt/src/features/presentation/filter_page/View/filter_page.dart';
@@ -21,5 +22,6 @@ final routes = <String, WidgetBuilder>{
   'filter': (BuildContext context) => FilterPage(),
   'collections': (BuildContext context) => CollectionsPage(),
   'collections-detail': (BuildContext context) => CollectionDetailPage(),
-  'place-detail': (BuildContext context) => PlaceDetailPage()
+  'place-detail': (BuildContext context) => PlaceDetailPage(),
+  'profile-detail': (BuildContext context) => ProfileDetailPage()
 };

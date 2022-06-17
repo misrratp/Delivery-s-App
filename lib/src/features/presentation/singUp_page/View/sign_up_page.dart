@@ -31,7 +31,11 @@ class SignUpPage extends StatelessWidget {
               _phoneInput(context),
               _dateOfBirthInput(context),
               _passwordInput(context),
-              roundedButton(labelButton: 'Sign Up', color: orange, func: () {}),
+              createButton(
+                  shape: StadiumBorder(),
+                  labelButton: 'Sign Up',
+                  buttonColor: orange,
+                  func: () {}),
               Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),

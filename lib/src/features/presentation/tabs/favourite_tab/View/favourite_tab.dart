@@ -43,6 +43,9 @@ class _FavouriteTabState extends State<FavouriteTab> {
                         buttonText: 'Delivery',
                         hasActionButton: true,
                         isFavourite: true),
+                    SizedBox(
+                      height: 10,
+                    ),
                     favouritesCard(
                         context: context,
                         image: NetworkImage(

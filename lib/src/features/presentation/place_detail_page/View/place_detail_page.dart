@@ -1,5 +1,6 @@
 import 'package:deliver_app_yt/src/colors/colors.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
+import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/header_double.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class PlaceDetailPage extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           label: headerText(
-              texto: 'Añadir a la cesta 95.40',
+              texto: 'Add to cart 95.40 €',
               color: Colors.white,
               fontWeight: FontWeight.w600,
               fontSize: 17)),
@@ -23,7 +24,7 @@ class PlaceDetailPage extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             backgroundColor: orange,
-            expandedHeight: 395,
+            expandedHeight: 318,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
@@ -43,7 +44,7 @@ class PlaceDetailPage extends StatelessWidget {
                       _promoButton(),
                       _infoPlace(),
                       _infoPlaceStats(),
-                      _offerBanner()
+                      //     _offerBanner()
                     ],
                   )
                 ],
@@ -72,7 +73,7 @@ class PlaceDetailPage extends StatelessWidget {
           ),
           SliverList(
               delegate: SliverChildListDelegate([
-            _headers(texto: 'Populares'),
+            _headers(texto: 'Populars'),
             _sliderCards(),
             _headers(texto: 'Full Menu'),
             _menuList(context),
@@ -95,18 +96,14 @@ Widget _promoButton() {
     margin: EdgeInsets.only(top: 121.0, left: 30.0, right: 15.0),
     width: double.infinity,
     height: 25,
-    child: Row(
+    /*  child: Row(
       children: [
-        RaisedButton(
-          elevation: 0.5,
-          onPressed: () {},
-          shape: StadiumBorder(),
-          child: headerText(
-              texto: 'Free Delivery', color: Colors.white, fontSize: 12.0),
-          color: orange,
-        )
+        createButton(
+            labelButton: 'Free Delivery',
+            buttonColor: orange,
+            labelFontsize: 12.0)
       ],
-    ),
+    ), */
   );
 }
 
@@ -265,17 +262,12 @@ Widget _offerBanner() {
           ],
         ),
         Spacer(),
-        RaisedButton(
-          elevation: 0.5,
-          onPressed: () {},
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          color: orange,
-          child: headerText(
-              texto: 'Order now',
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 13.0),
-        )
+        createButton(
+            labelButton: 'Order now',
+            buttonColor: orange,
+            labelFontsize: 13.0,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)))
       ],
     ),
   );
@@ -321,7 +313,7 @@ Widget _cards() {
       Container(
           alignment: Alignment.centerLeft,
           child: headerText(
-              texto: "9.50",
+              texto: "9.50 €",
               fontWeight: FontWeight.w500,
               color: gris,
               fontSize: 14.0)),
@@ -330,7 +322,7 @@ Widget _cards() {
           Container(
               margin: EdgeInsets.only(top: 10),
               child: headerText(
-                  texto: "Selecciona",
+                  texto: "Select",
                   fontWeight: FontWeight.w500,
                   color: orange,
                   fontSize: 15.0)),

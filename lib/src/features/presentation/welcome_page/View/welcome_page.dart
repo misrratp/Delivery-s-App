@@ -51,16 +51,16 @@ class WelcomePage extends StatelessWidget {
                     fontSize: 17),
               ),
 
-              roundedButton(
+              createButton(
                   labelButton: 'Log in',
-                  color: orange,
+                  buttonColor: orange,
                   func: () {
                     Navigator.pushNamed(context, 'login');
                   }),
 
-              roundedButton(
+              createButton(
                   labelButton: 'Connect with facebook',
-                  color: fbButtonColor,
+                  buttonColor: fbButtonColor,
                   isWithIcon: true,
                   icon: AssetImage('assets/facebook.png'),
                   func: () => print('goToFacebook'))

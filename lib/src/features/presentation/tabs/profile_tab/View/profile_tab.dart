@@ -14,7 +14,12 @@ class _ProfileTabState extends State<ProfileTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [_header()],
+        children: [
+          GestureDetector(
+              onTap: () => Navigator.pushNamed(context, 'profile-detail'),
+              child: _header()),
+          _contentProfile()
+        ],
       ),
     );
   }
@@ -56,11 +61,12 @@ Widget _header() {
             Container(
               height: 30,
               margin: EdgeInsets.only(left: 20.0),
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {},
-                color: rosa,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
+                style: ElevatedButton.styleFrom(
+                    primary: rosa,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30))),
                 child: Row(
                   children: [
                     Image(
@@ -82,6 +88,113 @@ Widget _header() {
             )
           ],
         )
+      ],
+    ),
+  );
+}
+
+Widget _contentProfile() {
+  return Container(
+    padding: EdgeInsets.all(5),
+    child: Column(
+      children: [
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/noti.png"),
+              width: 29,
+              height: 29,
+            ),
+            title:
+                headerText(texto: "Notifications", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/payicon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title: headerText(
+                texto: "Payment methods", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/rewardicon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title:
+                headerText(texto: "Order history", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/promoicon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title: headerText(
+                texto: "My promo codes", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        SizedBox(
+          height: 30,
+        ),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/settingicon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title: headerText(texto: "Settings", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/inviteicon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title: headerText(
+                texto: "Invite friends", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/helpicon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title:
+                headerText(texto: "Help center", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
+        ListTile(
+            leading: Image(
+              image: AssetImage("assets/abouticon.png"),
+              width: 29,
+              height: 29,
+            ),
+            title: headerText(texto: "About us", fontWeight: FontWeight.w400),
+            trailing: Icon(
+              Icons.chevron_right_outlined,
+              color: gris,
+            )),
       ],
     ),
   );

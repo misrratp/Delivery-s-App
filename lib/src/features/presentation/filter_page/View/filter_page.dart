@@ -1,5 +1,5 @@
-import 'package:deliver_app_yt/src/features/presentation/filter_page/View/customsWidgets/list_tile_checked.dart';
-import 'package:deliver_app_yt/src/features/presentation/filter_page/View/customsWidgets/price_filter.dart';
+import 'package:deliver_app_yt/src/features/presentation/filter_page/View/components/list_tile_checked.dart';
+import 'package:deliver_app_yt/src/features/presentation/filter_page/View/components/price_filter.dart';
 import 'package:flutter/material.dart';
 
 //Commons
@@ -8,8 +8,8 @@ import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers
 //Colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
 
-//Customs Widget
-import 'package:deliver_app_yt/src/features/presentation/filter_page/View/customsWidgets/cuisines_filters.dart';
+//components
+import 'package:deliver_app_yt/src/features/presentation/filter_page/View/components/cuisines_filters.dart';
 
 class FilterPage extends StatefulWidget implements PreferredSizeWidget {
   FilterPage({Key? key}) : super(key: key);

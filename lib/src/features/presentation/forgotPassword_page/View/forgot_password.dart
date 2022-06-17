@@ -38,9 +38,9 @@ class ForgotPassword extends StatelessWidget {
                         fontSize: 15.0)),
               ),
               _emailInput(),
-              roundedButton(
+              createButton(
                   labelButton: 'Send',
-                  color: orange,
+                  buttonColor: orange,
                   context: context,
                   func: () => _showAlerta(context))
 
@@ -75,9 +75,9 @@ void _showAlerta(BuildContext context) {
       AssetImage('assets/lock.png'),
       'Your password has been reset',
       "You'll shortly receive an email with a code to setup a new password",
-      roundedButton(
+      createButton(
           labelButton: 'Done',
-          color: orange,
+          buttonColor: orange,
           func: () {
             Navigator.pushNamed(context, 'login');
           })
