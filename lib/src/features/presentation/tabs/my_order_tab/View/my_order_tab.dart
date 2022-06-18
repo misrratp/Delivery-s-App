@@ -1,11 +1,10 @@
-import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:deliver_app_yt/src/colors/colors.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
-import 'package:deliver_app_yt/src/features/presentation/filter_page/View/components/list_tile_checked.dart';
 import 'package:deliver_app_yt/src/features/presentation/tabs/my_order_tab/View/Components/empty_order_view.dart';
-import 'package:flutter/material.dart';
+
 
 class MyOrderTab extends StatefulWidget {
   MyOrderTab({Key? key}) : super(key: key);
@@ -76,7 +75,7 @@ Widget _cardOrder(BuildContext context) {
     child: Column(
       children: [
         Row(
-          children: [_cardOrderTopContent()],
+          children: [_cardOrderTopContent(context)],
         ),
         Column(
           children: [
@@ -92,7 +91,7 @@ Widget _cardOrder(BuildContext context) {
   );
 }
 
-Widget _cardOrderTopContent() {
+Widget _cardOrderTopContent(BuildContext context) {
   return Container(
     padding: EdgeInsets.symmetric(vertical: 18),
     child: Column(
@@ -124,6 +123,7 @@ Widget _cardOrderTopContent() {
                   width: 100.0,
                   height: 20.0,
                   child: createButton(
+                    context: context,
                       labelButton: 'Free Delivery',
                       buttonColor: orange,
                       labelFontsize: 11.0)),
