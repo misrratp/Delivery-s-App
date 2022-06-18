@@ -15,8 +15,7 @@ Widget popularesCard({
   required String review,
   required String ratings,
   String buttonText = '',
-  required bool hasActionButton,
-}) {
+  required bool hasActionButton,}) {
   return Column(
     children: [
       Container(
@@ -81,6 +80,7 @@ Widget popularesCard({
                         height: 18.0,
                         child: hasActionButton
                             ? createButton(
+                              context: context,
                                 labelButton: buttonText,
                                 labelFontsize: 11.0,
                                 buttonColor: orange)

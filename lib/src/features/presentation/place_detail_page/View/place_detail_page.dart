@@ -1,6 +1,8 @@
+
+
 import 'package:deliver_app_yt/src/colors/colors.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/BackButtons/back_button.dart';
-import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Buttons/rounded_button.dart';
+
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/header_double.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 import 'package:flutter/material.dart';
@@ -238,40 +240,41 @@ Widget _infoPlaceStats() {
   );
 }
 
-Widget _offerBanner() {
-  return Container(
-    color: Color.fromRGBO(255, 237, 214, 1.0),
-    padding: EdgeInsets.all(20),
-    height: 90.0,
-    child: Row(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            headerText(
-                texto: 'New Try Pickup',
-                color: orange,
-                fontWeight: FontWeight.bold,
-                fontSize: 15.0),
-            headerText(
-                texto:
-                    'Pickup on your time. Your order is \n ready when you are',
-                color: primaryColor,
-                fontWeight: FontWeight.w400,
-                fontSize: 13.0)
-          ],
-        ),
-        Spacer(),
-        createButton(
-            labelButton: 'Order now',
-            buttonColor: orange,
-            labelFontsize: 13.0,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)))
-      ],
-    ),
-  );
-}
+//Widget _offerBanner(BuildContext context) {
+ // return Container(
+  //  color: Color.fromRGBO(255, 237, 214, 1.0),
+  //  padding: EdgeInsets.all(20),
+ //   height: 90.0,
+  //  child: Row(
+   //   children: [
+    //    Column(
+     //     crossAxisAlignment: CrossAxisAlignment.start,
+     //     children: [
+  //          headerText(
+  //              texto: 'New Try Pickup',
+  //              color: orange,
+  //              fontWeight: FontWeight.bold,
+  //              fontSize: 15.0),
+  //          headerText(
+  //              texto:
+  //                  'Pickup on your time. Your order is \n ready when you are',
+  //              color: primaryColor,
+  //              fontWeight: FontWeight.w400,
+  //              fontSize: 13.0)
+   //       ],
+   //     ),
+  //      Spacer(),
+    //   createButton(
+        //  context: context,
+            //labelButton: 'Order now',
+            //buttonColor: orange,
+          //  labelFontsize: 13.0,
+        //    shape:
+      //          RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)))
+    //  ],
+  //  ),
+//  );
+//}
 
 Widget _headers({texto: String}) {
   return Container(

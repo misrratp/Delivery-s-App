@@ -59,6 +59,7 @@ class LoginPage extends StatelessWidget {
                       _emailInput(),
                       _passwordInput(),
                       createButton(
+                        context: context,
                           labelButton: 'Log in',
                           buttonColor: orange,
                           func: () {

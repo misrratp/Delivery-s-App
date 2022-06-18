@@ -164,7 +164,7 @@ class _FilterPageState extends State<FilterPage> {
   }
 }
 
-Widget _appBar(BuildContext context) {
+PreferredSizeWidget _appBar(BuildContext context) {
   return AppBar(
     elevation: 1.5,
     backgroundColor: Colors.white,

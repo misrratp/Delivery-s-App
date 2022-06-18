@@ -1,4 +1,4 @@
-import 'package:deliver_app_yt/src/colors/colors.dart';
+
 import 'package:flutter/material.dart';
 
 const borderRadius = BorderRadius.all(Radius.circular(20));

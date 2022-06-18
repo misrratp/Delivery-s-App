@@ -7,12 +7,12 @@ import 'package:deliver_app_yt/src/colors/colors.dart';
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers/headers_text.dart';
 
 class ListTileCheck extends StatefulWidget {
-  String texto;
-  bool isActive;
-  Function()? func;
+  final String texto;
+  final bool isActive;
+  final Function()? func;
 
   ListTileCheck(
-      {Key? key, required this.texto, required this.isActive, this.func})
+      {Key? key, required this.texto, required this.isActive, required this.func})
       : super(key: key);
 
   @override
@@ -35,7 +35,8 @@ class _ListTileCheckState extends State<ListTileCheck> {
 }
 
 Widget listTiles(
-    {BuildContext? context, texto: String, Function()? func, isActive: bool}) {
+    {
+      required BuildContext? context, texto: String, Function()? func, isActive: bool}) {
   return Container(
     decoration: BoxDecoration(
         border:

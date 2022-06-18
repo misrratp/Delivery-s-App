@@ -52,6 +52,7 @@ class WelcomePage extends StatelessWidget {
               ),
 
               createButton(
+                context: context,
                   labelButton: 'Log in',
                   buttonColor: orange,
                   func: () {
@@ -59,6 +60,7 @@ class WelcomePage extends StatelessWidget {
                   }),
 
               createButton(
+                  context: context,
                   labelButton: 'Connect with facebook',
                   buttonColor: fbButtonColor,
                   isWithIcon: true,

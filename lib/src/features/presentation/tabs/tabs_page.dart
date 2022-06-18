@@ -73,6 +73,7 @@ class _TabsPageState extends State<TabsPage> {
         'Enable Your Location',
         "Please allow to use your location to show nearby restaurant on the map.",
         createButton(
+          context: context,
             labelButton: 'Enable Your Location',
             buttonColor: orange,
             func: () {}));

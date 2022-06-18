@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 Widget cardVertical(
     {required BuildContext context,
-    double? width,
-    double? height,
+    required double? width,
+    required double? height,
     required ImageProvider<Object> image,
     required String title,
     required String subtitle}) {

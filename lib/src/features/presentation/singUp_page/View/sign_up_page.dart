@@ -32,6 +32,7 @@ class SignUpPage extends StatelessWidget {
               _dateOfBirthInput(context),
               _passwordInput(context),
               createButton(
+                context: context,
                   shape: StadiumBorder(),
                   labelButton: 'Sign Up',
                   buttonColor: orange,

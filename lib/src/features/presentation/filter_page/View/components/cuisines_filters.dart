@@ -30,25 +30,25 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
           children: [
             _createButtonFilter(() {
               setState(() => btnAmerican = !btnAmerican);
-            }, btnAmerican, 'American'),
+            }, btnAmerican, 'American', context),
             _createButtonFilter(() {
               setState(() => btnAsia = !btnAsia);
-            }, btnAsia, 'Asian'),
+            }, btnAsia, 'Asian', context),
             _createButtonFilter(() {
               setState(() => btnSushi = !btnSushi);
-            }, btnSushi, 'Sushi'),
+            }, btnSushi, 'Sushi', context),
             _createButtonFilter(() {
               setState(() => btnPizza = !btnPizza);
-            }, btnPizza, 'Pizza'),
+            }, btnPizza, 'Pizza', context),
             _createButtonFilter(() {
               setState(() => btnDesserts = !btnDesserts);
-            }, btnDesserts, 'Desserts'),
+            }, btnDesserts, 'Desserts', context),
             _createButtonFilter(() {
               setState(() => btnFastFood = !btnFastFood);
-            }, btnFastFood, 'Fast Food'),
+            }, btnFastFood, 'Fast Food', context),
             _createButtonFilter(() {
               setState(() => btnVietnamese = !btnVietnamese);
-            }, btnVietnamese, 'Vietnamese'),
+            }, btnVietnamese, 'Vietnamese', context),
           ],
         ),
       ],
@@ -56,12 +56,13 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
   }
 }
 
-Widget _createButtonFilter(Function()? func, bool isActive, String labelText) {
+Widget _createButtonFilter(Function()? func, bool isActive, String labelText, BuildContext context ) {
   return Container(
     width: 120,
     height: 50,
     margin: EdgeInsets.only(left: 5),
     child: createButton(
+      context: context,
       labelButton: labelText,
       labelFontsize: 11.0,
       buttonColor: isActive ? orange : gris,

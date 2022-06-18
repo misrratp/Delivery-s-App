@@ -6,7 +6,7 @@ import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Cards/p
 //Colors
 import 'package:deliver_app_yt/src/colors/colors.dart';
 //Swiper
-import 'package:flutter_swiper/flutter_swiper.dart';
+
 
 class ExploreTab extends StatelessWidget {
   const ExploreTab({Key? key}) : super(key: key);
@@ -139,18 +139,11 @@ Widget _topBar(BuildContext context) {
 Widget _sliderCards() {
   return Container(
     height: 290.0, //Cambiar si hay errores de pixeles
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
-      itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
+    child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) {
             return _tarjeta(context);
-          },
-        );
-      },
-    ),
+    }, )
   );
 }
 
@@ -211,6 +204,7 @@ Widget _tarjeta(BuildContext context) {
                       width: 80.0,
                       height: 18.0,
                       child: createButton(
+                        context: context,
                           labelButton: 'Delivery',
                           buttonColor: orange,
                           labelFontsize: 11.0))
@@ -254,17 +248,11 @@ Widget _header(BuildContext context, String textHeader, String textAction) {
 Widget _sliderCollection() {
   return Container(
     height: 180.0,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
-      itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
+    child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (BuildContext context, int index) {
               return _tarjetaCollection(context);
-            });
-      },
-    ),
+            })
   );
 }
 

@@ -10,7 +10,7 @@ import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Headers
 import 'package:deliver_app_yt/src/features/presentation/commons_widgets/Cards/populares_card.dart';
 
 //Swiper
-import 'package:flutter_swiper/flutter_swiper.dart';
+
 
 class SearchPage extends StatelessWidget {
   @override
@@ -116,11 +116,7 @@ Widget _sliderRecentSearch() {
   return Container(
     margin: EdgeInsets.only(top: 5.0),
     height: 190.0,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
-      itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
+    child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) {
             return cardVertical(
@@ -132,8 +128,6 @@ Widget _sliderRecentSearch() {
                 image: NetworkImage(
                     'https://www.animalgourmet.com/wp-content/uploads/2017/05/mole.jpg'));
           },
-        );
-      },
-    ),
+        )
   );
 }

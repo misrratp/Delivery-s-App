@@ -39,9 +39,10 @@ class ForgotPassword extends StatelessWidget {
               ),
               _emailInput(),
               createButton(
+                context: context,
                   labelButton: 'Send',
                   buttonColor: orange,
-                  context: context,
+                  
                   func: () => _showAlerta(context))
 
               // _sendButton(context)
@@ -76,6 +77,7 @@ void _showAlerta(BuildContext context) {
       'Your password has been reset',
       "You'll shortly receive an email with a code to setup a new password",
       createButton(
+        context: context,
           labelButton: 'Done',
           buttonColor: orange,
           func: () {

@@ -20,7 +20,7 @@ class TextFieldsProfileDetailView extends StatelessWidget {
 
 Widget _createTextFieldEmail(BuildContext context) {
   return Container(
-    width: screenWidth!.getScreenWidth(context: context, multiplier: 0.85),
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -37,7 +37,7 @@ Widget _createTextFieldEmail(BuildContext context) {
 
 Widget _createTextFieldUsername(BuildContext context) {
   return Container(
-    width: screenWidth!.getScreenWidth(context: context, multiplier: 0.85),
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -54,7 +54,7 @@ Widget _createTextFieldUsername(BuildContext context) {
 
 Widget _createTextFieldPhone(BuildContext context) {
   return Container(
-    width: screenWidth!.getScreenWidth(context: context, multiplier: 0.85),
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -71,7 +71,7 @@ Widget _createTextFieldPhone(BuildContext context) {
 
 Widget _createTextFieldDateofBirth(BuildContext context) {
   return Container(
-    width: screenWidth!.getScreenWidth(context: context, multiplier: 0.85),
+    width:getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -88,7 +88,7 @@ Widget _createTextFieldDateofBirth(BuildContext context) {
 
 Widget _createTextFieldDeliveryAdress(BuildContext context) {
   return Container(
-    width: screenWidth!.getScreenWidth(context: context, multiplier: 0.85),
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
