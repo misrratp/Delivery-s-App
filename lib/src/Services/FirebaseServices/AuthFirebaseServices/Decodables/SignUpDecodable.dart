@@ -22,7 +22,6 @@ class SignUpDecodable {
     String? localId;
 
     factory SignUpDecodable.fromJson(String str) => SignUpDecodable.fromMap(json.decode(str));
-
     String toJson() => json.encode(toMap());
 
     factory SignUpDecodable.fromMap(Map<String, dynamic> json) => SignUpDecodable(

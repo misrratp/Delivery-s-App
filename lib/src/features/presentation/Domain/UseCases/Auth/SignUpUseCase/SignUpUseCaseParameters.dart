@@ -1,7 +1,7 @@
 
-class SingUpUseCaseParameters{
+class SignUpUseCaseParameters{
 
-  SingUpUseCaseParameters({required this.username,
+  SignUpUseCaseParameters({required this.username,
   required this.email,
   required this.password,
   this.phone,

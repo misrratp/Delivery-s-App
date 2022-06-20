@@ -1,7 +1,7 @@
 
-class SingUpRepositoryParameters{
+class SignUpRepositoryParameters{
 
-  SingUpRepositoryParameters({
+  SignUpRepositoryParameters({
     required this.email,
     required this.password
   });

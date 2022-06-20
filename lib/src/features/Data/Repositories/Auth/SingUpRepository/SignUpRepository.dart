@@ -3,7 +3,7 @@ import 'package:deliver_app_yt/src/Services/FirebaseServices/AuthFirebaseService
 import 'package:deliver_app_yt/src/Services/FirebaseServices/AuthFirebaseServices/Decodables/SignUpDecodable.dart';
 import 'package:deliver_app_yt/src/utils/Helpers/ResultType/ResultType.dart';
 
-import 'package:deliver_app_yt/src/features/Data/Repositories/Auth/SingUpRepository/SingUpRepositoryParameters.dart';
+import 'package:deliver_app_yt/src/features/Data/Repositories/Auth/SingUpRepository/SignUpRepositoryParameters.dart';
 
 import 'package:deliver_app_yt/src/Services/FirebaseServices/AuthFirebaseServices/SignUpAuthServices.dart';
 
@@ -11,16 +11,16 @@ import 'package:deliver_app_yt/src/Base/ApiService/AppError.dart';
 
 import '../../../../presentation/Domain/UseCases/Interfaces/Interfaces.dart';
 
-class DefaultSingUpRepository extends SingUpRepository{
+class DefaultSignUpRepository extends SignUpRepository{
 
   //Dependencias
   SignUpService _signUpService;
 
-  DefaultSingUpRepository({SignUpService? signUpService }) 
+  DefaultSignUpRepository({SignUpService? signUpService }) 
   : _signUpService = signUpService ?? DefaultSignUpService();
 
   @override
-  Future<Result<DefaultSignUpService, Failure>> singUp({required SingUpRepositoryParameters params}) async {
+  Future<Result<SignUpDecodable, Failure>> signUp({required SignUpRepositoryParameters params}) async {
    
    try{
      final result = await _signUpService.signUp(bodyParameters: params.toMap());
@@ -31,5 +31,11 @@ class DefaultSingUpRepository extends SingUpRepository{
 
      }
    }
+
+  @override
+  Future<Result<DefaultSignUpService, Failure>> singUp({required SignUpRepositoryParameters params}) {
+    // TODO: implement signUp
+    throw UnimplementedError();
+  }
 
 }
