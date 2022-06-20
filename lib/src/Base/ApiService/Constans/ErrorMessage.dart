@@ -1,3 +1,8 @@
+abstract class AppFailureMessages{
+  //Error Messager
+  static String unExpectedErrorMessage = "Ha ocurrido un error inesperado";
+}
+
 
 abstract class FBFailureMessages{
   // Error Messages
