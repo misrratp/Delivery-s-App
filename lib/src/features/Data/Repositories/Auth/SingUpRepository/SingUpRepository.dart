@@ -27,8 +27,7 @@ class DefaultSingUpRepository extends SingUpRepository{
      SignUpDecodable decodable = SignUpDecodable.fromMap(result);
      return Result.success(decodable);
    } on Failure catch(f){
-     // TODO:
-     return Result.failure(f);
+     return Result.failure(Failure.getFirebaseAuthErrorMessage(error: f.error));
 
      }
    }
