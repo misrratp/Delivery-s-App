@@ -5,5 +5,5 @@ class DefaultSignUpService extends SignUpService{
   Future<Map<String, dynamic>> signUp({required Map<String, dynamic> bodyParameters}) {
    return apiService.getDataFromPostRequest(bodyParameters: bodyParameters, url: endpoint);
   }
-  
+
   }

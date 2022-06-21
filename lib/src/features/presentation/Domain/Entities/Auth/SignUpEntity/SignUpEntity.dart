@@ -1,5 +1,5 @@
 // To parse this JSON data, do
-//
+
 //     final signUpDecodable = signUpDecodableFromMap(jsonString);
 
 import 'dart:convert';
@@ -17,7 +17,7 @@ class SignUpEntity {
     String? kind;
     String? idToken;
     String? email;
-    String?refreshToken;
+    String? refreshToken;
     String? expiresIn;
     String? localId;
 
