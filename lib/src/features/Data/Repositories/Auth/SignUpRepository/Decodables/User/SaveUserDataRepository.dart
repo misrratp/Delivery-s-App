@@ -1,4 +1,3 @@
-
 import 'package:deliver_app_yt/src/Base/ApiService/Constans/ErrorMessage.dart';
 import 'package:deliver_app_yt/src/Services/FirebaseServices/RealtimeDatabaseService/Interfaces/Interfaces.dart';
 import 'package:deliver_app_yt/src/Services/FirebaseServices/RealtimeDatabaseService/Services/RealtimeDataBaseService.dart';
@@ -13,31 +12,32 @@ abstract class _Paths {
   static String userCollection = "users/";
 }
 
-class DefaultSaveUserDataRepository extends SaveUserDataRepository{
-  
-  //Dependencias 
+class DefaultSaveUserDataRepository extends SaveUserDataRepository {
+  //Dependencias
   RealtimeDatabaseService _realtimeDatabaseService;
 
-  DefaultSaveUserDataRepository({RealtimeDatabaseService? realtimeDatabaseService})
-              : _realtimeDatabaseService = realtimeDatabaseService ?? DefaultRealtimeDatabaseService();
-  
-  
+  DefaultSaveUserDataRepository(
+      {RealtimeDatabaseService? realtimeDatabaseService})
+      : _realtimeDatabaseService =
+            realtimeDatabaseService ?? DefaultRealtimeDatabaseService();
+
   @override
-  Future<Result<SignUpDecodable, Failure>> saveUserData({required UserBodyParameters parameters}) async {
-    if(parameters.localId == null){
-      return Result.failure(Failure.fromMessage(message: AppFailureMessages.unExpectedErrorMessage));
-          }
-          //Creamos el Path
-          var path = _Paths.userCollection + parameters.localId!;
-  
-    try{
-      final result = await _realtimeDatabaseService.putData(bodyParameters: parameters.toMap(), path: path);
+  Future<Result<SignUpDecodable, Failure>> saveUserData(
+      {required UserBodyParameters parameters}) async {
+    if (parameters.localId == null) {
+      return Result.failure(Failure.fromMessage(
+          message: AppFailureMessages.unExpectedErrorMessage));
+    }
+    //Creamos el Path
+    var path = _Paths.userCollection + parameters.localId!;
+
+    try {
+      final result = await _realtimeDatabaseService.putData(
+          bodyParameters: parameters.toMap(), path: path);
       UserDecodable decodable = UserDecodable.fromMap(result);
       return Result.success(decodable);
-    } on Failure catch(f){
+    } on Failure catch (f) {
       return Result.failure(f);
     }
-  
   }
-
 }
