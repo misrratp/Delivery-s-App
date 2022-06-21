@@ -35,7 +35,7 @@ class DefaultSaveUserDataRepository extends SaveUserDataRepository {
       final result = await _realtimeDatabaseService.putData(
           bodyParameters: parameters.toMap(), path: path);
       UserDecodable decodable = UserDecodable.fromMap(result);
-      return Result.success(decodable);
+      return Result.success(decodable as SignUpDecodable?);
     } on Failure catch (f) {
       return Result.failure(f);
     }

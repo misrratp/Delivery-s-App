@@ -5,8 +5,12 @@ import 'package:deliver_app_yt/src/features/Data/Repositories/Auth/SignUpReposit
 import 'package:deliver_app_yt/src/features/Data/Repositories/Auth/SignUpRepository/User/UserBodyParameters.dart';
 import 'package:deliver_app_yt/src/utils/Helpers/ResultType/ResultType.dart';
 
+import '../../../../Services/FirebaseServices/AuthFirebaseServices/Decodables/SignInDecodable.dart';
+import '../../../Data/Repositories/Auth/SignUpRepository/SigInRepository/SigInBodyRepositoryParameters.dart';
+
 abstract class SignIpRepository {
-  signIn();
+  Future<Result<SignInDecodable, Failure>> signIn(
+      {required SigInBodyRepositoryParameters params});
 }
 
 abstract class SignUpRepository {
